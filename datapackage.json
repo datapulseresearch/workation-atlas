@@ -1,0 +1,46 @@
+{
+  "name": "workation-atlas-2026",
+  "title": "Workation Atlas 2026",
+  "description": "Best workation cities for German remote workers, ranked three ways (Adventure Seeker, Smart Spender, Easy Mover), plus the global share of 'workation' search demand by country. Dataset behind the DataPulse Research study.",
+  "homepage": "https://www.datapulse.de/en/workation-atlas",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    { "title": "DataPulse Research", "path": "https://www.datapulse.de/en/workation-atlas" },
+    { "title": "Ahrefs (global keyword search volume)" }
+  ],
+  "keywords": ["workation", "remote work", "digital nomad", "travel", "germany", "open data"],
+  "resources": [
+    {
+      "name": "city-rankings-top5",
+      "path": "data/workation_city_rankings_top5.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          { "name": "ranking", "type": "string", "description": "Ranking type: Adventure Seeker, Smart Spender or Easy Mover" },
+          { "name": "rank", "type": "integer", "description": "Position within the ranking (1-5)" },
+          { "name": "city", "type": "string", "description": "City name" },
+          { "name": "country", "type": "string", "description": "Country the city is in" }
+        ]
+      }
+    },
+    {
+      "name": "search-share-by-country",
+      "path": "data/workation_search_share_by_country.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          { "name": "country", "type": "string", "description": "Country (or 'Rest of the World')" },
+          { "name": "share_of_global_workation_searches_percent", "type": "number", "description": "Share of global 'workation' search demand, in percent" }
+        ]
+      }
+    }
+  ]
+}
